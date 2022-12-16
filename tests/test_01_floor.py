@@ -1,6 +1,6 @@
-"""Test the UserRole Class"""
+"""Test the Floor module."""
 
-from datacenter.model.user import User
+from datacenter.model.floor import Floor
 from utilities import create_test_session
 
 try:
@@ -19,15 +19,15 @@ def test_00(capsys):
     assert err == ""
 
 
-def test_01_user(capsys):
-    """Test Firstname."""
+def test_01_floor(capsys):
+    """Test Floor."""
     session = create_test_session()
-    first_name = datacenter.model.User()
-    first_name.Firstname = "Firstname"
-    session.add(first_name)
+    floor = datacenter.model.Floor()
+    floor.value = "Floor"
+    session.add(floor)
     session.commit()
 
-    assert repr(first_name) == "Firstname:Firstname"
+    assert repr(floor) == "Floor:Floor"
 
     out, err = capsys.readouterr()
     assert out == ""

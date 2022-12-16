@@ -1,6 +1,8 @@
-"""Test the UserRole Class"""
+"""Test the exam_env module.
+all import and structural testing is done in this module.
+"""
 
-from datacenter.model.user import User
+from datacenter.model.email import Email
 from utilities import create_test_session
 
 try:
@@ -19,15 +21,15 @@ def test_00(capsys):
     assert err == ""
 
 
-def test_01_user(capsys):
-    """Test Firstname."""
+def test_01_email(capsys):
+    """Test FooBar."""
     session = create_test_session()
-    first_name = datacenter.model.User()
-    first_name.Firstname = "Firstname"
-    session.add(first_name)
+    email = datacenter.model.Email()
+    email.email_address = "Email Address"
+    session.add(email)
     session.commit()
 
-    assert repr(first_name) == "Firstname:Firstname"
+    assert repr(email) == "email_address:Email Address."
 
     out, err = capsys.readouterr()
     assert out == ""
