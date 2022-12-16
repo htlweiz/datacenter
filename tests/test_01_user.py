@@ -23,7 +23,7 @@ def test_01_user(capsys):
     """Test Firstname."""
     session = create_test_session()
     first_name = datacenter.model.User()
-    first_name.Firstname = "first_name"
+    first_name.Firstname = "Firstname"
     session.add(first_name)
     session.commit()
 
