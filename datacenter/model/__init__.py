@@ -7,8 +7,7 @@ from .address import Address
 from .email import Email
 from .room import Room
 from .device_type import DeviceType
-from .address import Address
-from .socket import Socket
+# from .socket import Socket
 from .network_usage import NetworkUsage
 
 __exports__ = [
@@ -17,7 +16,7 @@ __exports__ = [
     Email,
     Address,
     Room,
-    Socket,
+    # Socket,
     DeviceType,
     NetworkUsage,
 ]
