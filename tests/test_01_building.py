@@ -1,4 +1,6 @@
-from datacenter.model.foo_bar import FooBar
+"""Test the Building Module"""
+
+from datacenter.model.building import Building
 from utilities import create_test_session
 
 try:
@@ -11,7 +13,7 @@ def test_01_building(capsys):
     """Test Building."""
     session = create_test_session()
     building = datacenter.model.Building()
-    building.value = "Building"
+    building.name = "Building"
     session.add(building)
     session.commit()
 

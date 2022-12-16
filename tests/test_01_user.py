@@ -1,4 +1,4 @@
-"""Test the UserRole Class"""
+"""Test the User Module"""
 
 from datacenter.model.user import User
 from utilities import create_test_session
@@ -20,7 +20,7 @@ def test_00(capsys):
 
 
 def test_01_user(capsys):
-    """Test Firstname."""
+    """Test User."""
     session = create_test_session()
     first_name = datacenter.model.User()
     first_name.Firstname = "Firstname"

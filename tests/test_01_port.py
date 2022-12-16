@@ -1,6 +1,6 @@
-"""Test the Room Module"""
+"""Test the Port Module"""
 
-from datacenter.model.room import Room
+from datacenter.model.port import Port
 from utilities import create_test_session
 
 try:
@@ -19,15 +19,15 @@ def test_00(capsys):
     assert err == ""
 
 
-def test_01_room(capsys):
-    """Test Room."""
+def test_01_port(capsys):
+    """Test Port."""
     session = create_test_session()
-    room = datacenter.model.Room()
-    room.room_name = "Room"
-    session.add(room)
+    port = datacenter.model.Port()
+    port.IPAddress = "Port"
+    session.add(port)
     session.commit()
 
-    assert repr(room) == "Room:Room"
+    assert repr(port) == "IPAddress:Port"
 
     out, err = capsys.readouterr()
     assert out == ""
