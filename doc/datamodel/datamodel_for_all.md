@@ -1,6 +1,6 @@
 # Datamodel for all the tables
 
-## User
+## User (Postl, Lazau)
 
 -   Id INT
 -   Firstname VARCHAR
@@ -9,7 +9,7 @@
 -   Password VARCHAR
 -   Constraint PK(Id)
 
-## Email
+## Email (Fett, Schafferhofer)
 
 -   Id INT
 -   EmailAddress VARCHAR
@@ -18,7 +18,7 @@
 -   Constraint PK(Id)
 -   Constraint FK(UserId) references User.Id
 
-## PhoneNumber
+## PhoneNumber (Derler)
 
 -   Id INT
 -   PhoneNumber INT
@@ -26,7 +26,7 @@
 -   Constraint PK(Id)
 -   Constraint FK(UserId) references User.Id
 
-## Address
+## Address (Torbics)
 
 -   Id INT
 -   UserId INT
@@ -37,14 +37,14 @@
 -   Constraint PK(Id)
 -   Constraint FK(UserId) references User.Id
 
-## Role
+## Role (Stranzl)
 
 -   Id INT
 -   RoleName VARCHAR
 -   Description VARCHAR
 -   Constraint PK (Id)
 
-## UserRole
+## UserRole (Glieder)
 
 -   Id INT
 -   UserId INT
@@ -53,7 +53,7 @@
 -   Constraint FK(UserId) references User.Id
 -   Constraint FK(RoleId) references Role.Id
 
-## Room
+## Room (Posch)
 
 -   Id INT
 -   RoomName VARHCAR
@@ -61,7 +61,7 @@
 -   Constraint PK(Id)
 -   Constraint FK(FloorId) references Floor.Id
 
-## Floor
+## Floor (Serschön)
 
 -   Id INT
 -   FloorName VARCHAR
@@ -69,13 +69,13 @@
 -   Constraint PK(Id)
 -   Constraint FK(BuildingId) references Building.Id
 
-## Building
+## Building (Glössl)
 
 -   Id INT
 -   BuildingName VARCHAR
 -   Constraint PK(Id)
 
-## NetworkUsage
+## NetworkUsage (Heiling, Shala)
 
 -   Id INT
 -   Timestamp INT
@@ -85,12 +85,13 @@
 -   Constraint PK(Id)
 -   Constraint FK(ConntectionId) references Connection.Id
 
-## DeviceType
+## DeviceType (Retter)
 
 -   Id INT
 -   DeviceFunctionality VARCHAR
+-   Constraint PK(Id)
 
-## Device
+## Device (Schneidhofer, Gölles)
 
 -   Id INT
 -   DeviceName VARCHAR
@@ -98,7 +99,7 @@
 -   Constraint PK(Id)
 -   Constraint FK(DeviceTypeId) references DeviceType.Id
 
-## Socket
+## Socket (Pfeiffer, Puntigam)
 
 -   Id INT
 -   SocketName VARCHAR

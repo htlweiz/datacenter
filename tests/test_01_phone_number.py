@@ -26,10 +26,10 @@ def test_00(capsys):
 def test_01_phone_number(capsys):
     """Test PhoneNumber."""
     session = create_test_session()
-    user = datacenter.model.User(first_name="Max",
-                                 sure_name="Musterman",
-                                 username="mm12",
-                                 password="12345678")
+    user = datacenter.model.User(Firstname="Max",
+                                 Surename="Musterman",
+                                 Username="mm12",
+                                 Password="12345678")
     session.add(user)
     session.commit()
     phone_number = datacenter.model.PhoneNumber(phone_number=06648332918, user_id=user.ID)
