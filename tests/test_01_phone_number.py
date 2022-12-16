@@ -32,7 +32,7 @@ def test_01_phone_number(capsys):
                                  Password="12345678")
     session.add(user)
     session.commit()
-    phone_number = datacenter.model.PhoneNumber(phone_number=06648332918, user_id=user.ID)
+    phone_number = datacenter.model.PhoneNumber(phone_number="06648332918", user_id=user.ID)
     session.add(phone_number)
     session.commit()
 

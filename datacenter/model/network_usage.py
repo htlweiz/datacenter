@@ -1,6 +1,6 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, ForeignKey, DateTime
-from base import Base
+from .base import Base
 
 class NetworkUsage(Base):
     __tablename__ = 'network_usage'

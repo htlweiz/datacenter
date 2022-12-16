@@ -3,7 +3,6 @@
 
 from .base import Base
 from .foo_bar import FooBar
-from .phone_number import PhoneNumber
 from .building import Building
 from .email import Email
 from .room import Room
@@ -17,7 +16,6 @@ from .user import User
 __exports__ = [
     Base,
     FooBar,
-    PhoneNumber,
     Building,
     Email,
     Address,

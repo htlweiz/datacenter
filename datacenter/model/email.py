@@ -2,6 +2,7 @@ import sqlalchemy
 from .user import User
 from .base import Base
 
+
 class Email(Base):
     """Demo orm class Email."""
     __tablename__ = "email"

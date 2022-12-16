@@ -1,13 +1,13 @@
 """Socket Database."""
 
-from base import Base
+from .base import Base
 from sqlalchemy import Column, ForeignKey, Integer, String
 
 
 class Socket(Base):
     """Socket Database."""
 
-    tablename = 'sockets'
+    __tablename__ = 'sockets'
 
     id = Column(Integer, primary_key=True)
     socket_name = Column(String)
