@@ -90,6 +90,7 @@
 
 -   Id INT
 -   DeviceFunctionality VARCHAR
+-   Constraint PK(Id)
 
 ## Device (Schneidhofer, Gölles)
 
