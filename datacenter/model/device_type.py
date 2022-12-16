@@ -1,7 +1,8 @@
-"""Demotable DeviceType."""
+"""Table DeviceType."""
 
 import sqlalchemy
 from .base import Base
+
 
 class DeviceType(Base):
     """Demo orm class DeviceType."""

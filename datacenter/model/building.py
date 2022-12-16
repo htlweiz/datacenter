@@ -1,7 +1,8 @@
-"""Demotable building."""
+"""Table Building."""
 
 import sqlalchemy
 from .base import Base
+
 
 class Building(Base):
     """Orm class for building"""
