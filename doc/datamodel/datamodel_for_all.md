@@ -53,7 +53,6 @@
 -   Constraint FK(UserId) references User.Id
 -   Constraint FK(RoleId) references Role.Id
 
-
 ## Room
 
 -   Id INT
