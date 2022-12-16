@@ -32,11 +32,11 @@ def test_01_phone_number(capsys):
                                  Password="12345678")
     session.add(user)
     session.commit()
-    phone_number = datacenter.model.PhoneNumber(phone_number="06648332918", user_id=user.ID)
+    phone_number = PhoneNumber(phone_number="06648332918", user_id=user.ID)
     session.add(phone_number)
     session.commit()
 
-    assert repr(phone_number) == "Phone number: 06648332918"
+    assert repr(phone_number) == "Phone number:06648332918"
 
     out, err = capsys.readouterr()
     assert out == ""
