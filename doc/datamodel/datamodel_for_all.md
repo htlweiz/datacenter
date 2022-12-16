@@ -70,7 +70,7 @@
 -   Constraint PK(Id)
 -   Constraint FK(BuildingId) references Building.Id
 
-## Building (Glössel)
+## Building (Glössl)
 
 -   Id INT
 -   BuildingName VARCHAR
