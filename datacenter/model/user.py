@@ -6,7 +6,7 @@ from .base import Base
 
 class User(Base):
     """Orm class User."""
-    __tablename__ = "user"
+    __tablename__ = "User"
     ID = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     Firstname = sqlalchemy.Column(sqlalchemy.String, nullable=False)
     Surename = sqlalchemy.Column(sqlalchemy.String, nullable=False)

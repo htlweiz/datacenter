@@ -21,7 +21,7 @@
 ## PhoneNumber (Derler)
 
 -   Id INT
--   PhoneNumber INT
+-   PhoneNumber VARCHAR
 -   UserId INT
 -   Constraint PK(Id)
 -   Constraint FK(UserId) references User.Id
@@ -52,7 +52,6 @@
 -   Constraint PK (Id)
 -   Constraint FK(UserId) references User.Id
 -   Constraint FK(RoleId) references Role.Id
-
 
 ## Room (Posch)
 
