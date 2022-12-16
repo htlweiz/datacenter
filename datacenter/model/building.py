@@ -6,7 +6,7 @@ from .base import Base
 class Building(Base):
     """Orm class for building"""
     __tablename__ = "building"
-    building_id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
+    Id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     name = sqlalchemy.Column(sqlalchemy.VARCHAR, nullable=False)
 
     def __repr__(self):
