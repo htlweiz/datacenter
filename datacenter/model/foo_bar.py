@@ -3,6 +3,7 @@
 import sqlalchemy
 from .base import Base
 
+
 class FooBar(Base):
     """Demo orm class FooBar."""
     __tablename__ = "foobar"
@@ -12,4 +13,3 @@ class FooBar(Base):
     def __repr__(self):
         """Generate nice representation!"""
         return "FooBar:%s" % self.value
-

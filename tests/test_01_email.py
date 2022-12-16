@@ -1,6 +1,4 @@
-"""Test the exam_env module.
-all import and structural testing is done in this module.
-"""
+"""Test the Email Module"""
 
 from datacenter.model.email import Email
 from utilities import create_test_session
@@ -22,14 +20,14 @@ def test_00(capsys):
 
 
 def test_01_email(capsys):
-    """Test FooBar."""
+    """Test Email."""
     session = create_test_session()
     email = datacenter.model.Email()
     email.email_address = "Email Address"
     session.add(email)
     session.commit()
 
-    assert repr(email) == "email_address:Email Address."
+    assert repr(email) == "Email:Email Address."
 
     out, err = capsys.readouterr()
     assert out == ""

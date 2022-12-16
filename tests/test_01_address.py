@@ -1,7 +1,4 @@
-"""Test the exam_env module.
-
-all import and structural testing is done in this module.
-"""
+"""Test the Address Module"""
 
 from datacenter.model.address import Address
 from utilities import create_test_session
@@ -26,11 +23,11 @@ def test_01_address(capsys):
     """Test Address."""
     session = create_test_session()
     address = datacenter.model.Address()
-    address.value = "Address"
+    address.City = "City"
     session.add(address)
     session.commit()
 
-    assert repr(address) == "Address:Address"
+    assert repr(address) == "Address:City"
 
     out, err = capsys.readouterr()
     assert out == ""

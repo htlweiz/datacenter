@@ -1,7 +1,4 @@
-"""Test the exam_env module.
-
-all import and structural testing is done in this module.
-"""
+"""Test the DeviceType Module"""
 
 from datacenter.model.device_type import DeviceType
 from utilities import create_test_session
@@ -23,7 +20,7 @@ def test_00(capsys):
 
 
 def test_01_device_type(capsys):
-    """Test FooBar."""
+    """Test DeviceType."""
     session = create_test_session()
     m_device_type = datacenter.model.DeviceType()
     m_device_type.device_functionality = "Teacher stuff."

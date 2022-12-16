@@ -1,4 +1,4 @@
-"""Test the Floor module."""
+"""Test the Floor Module."""
 
 from datacenter.model.floor import Floor
 from utilities import create_test_session
@@ -23,7 +23,7 @@ def test_01_floor(capsys):
     """Test Floor."""
     session = create_test_session()
     floor = datacenter.model.Floor()
-    floor.value = "Floor"
+    floor.floor_name = "Floor"
     session.add(floor)
     session.commit()
 

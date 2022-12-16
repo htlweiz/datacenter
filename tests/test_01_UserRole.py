@@ -1,4 +1,4 @@
-"""Test the UserRole Class"""
+"""Test the UserRole Module"""
 
 from datacenter.model.UserRole import UserRole
 from utilities import create_test_session
@@ -20,10 +20,10 @@ def test_00(capsys):
 
 
 def test_01_UserRole(capsys):
-    """Test FooBar."""
+    """Test UserRole."""
     session = create_test_session()
     userRole = datacenter.model.UserRole()
-    userRole.value = "UserRole"
+    userRole.userrole_id = "UserRole"
     session.add(userRole)
     session.commit()
 
