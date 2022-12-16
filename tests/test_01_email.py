@@ -20,15 +20,16 @@ def test_00(capsys):
     assert out == ""
     assert err == ""
 
+
 def test_01_email(capsys):
     """Test FooBar."""
     session = create_test_session()
     email = datacenter.model.Email()
-    m_device_type.device_functionality = "Teacher stuff."
-    session.add(m_device_type)
+    email.email_address = "Email Address"
+    session.add(email)
     session.commit()
 
-    assert repr(m_device_type) == "DeviceType:Teacher stuff."
+    assert repr(email) == "email_address:Email Address."
 
     out, err = capsys.readouterr()
     assert out == ""
