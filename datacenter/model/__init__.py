@@ -23,6 +23,8 @@ from .email import Email
 
 __exports__ = [
     Base,
+    Address,
+    Email,
     FooBar,
     Floor,
     Device,
@@ -38,6 +40,4 @@ __exports__ = [
     DeviceType,
     NetworkUsage,
     Building,
-    Address,
-    Email
 ]
