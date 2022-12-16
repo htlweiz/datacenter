@@ -2,7 +2,9 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, ForeignKey, DateTime
 from base import Base
 
+
 class NetworkUsage(Base):
+    """Network usage class."""
     __tablename__ = 'network_usage'
 
     network_usage_id = Column(Integer, primary_key=True)
@@ -13,4 +15,5 @@ class NetworkUsage(Base):
 
     def __repr__(self):
         """Generate nice representation!"""
-        return "NetworkUsage: {}mb/s, {}, time:{}".f(self.traffic, self.performance, self.timestamp)
+        return "NetworkUsage: {}mb/s\n {}\n time:{}".f(
+                        self.traffic, self.performance, self.timestamp)
