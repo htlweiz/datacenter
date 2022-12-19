@@ -1,22 +1,26 @@
-from datacenter.model.foo_bar import FooBar
-from utilities import create_test_session
+import pytest
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
-try:
-    import datacenter
-except ImportError:
-    pass
+from .base import Base
+from .building import Building
 
+@pytest.fixture
+def db_session():
+    engine = create_engine('sqlite:///:memory:')
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    yield session
+    session.close()
 
-def test_01_building(capsys):
-    """Test Building."""
-    session = create_test_session()
-    building = datacenter.model.Building()
-    building.value = "Building"
-    session.add(building)
-    session.commit()
+def test_building_orm(db_session):
+    building = Building(name="Test Building")
+    db_session.add(building)
+    db_session.commit()
+    result = db_session.query(Building).first()
+    assert result == building
 
-    assert repr(building) == "Building:Building"
-
-    out, err = capsys.readouterr()
-    assert out == ""
-    assert err == ""
+def test_building_repr(db_session):
+    building = Building(name="Test Building")
+    assert str(building) == "Building:Test Building"
